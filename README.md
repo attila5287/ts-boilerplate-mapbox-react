@@ -6,7 +6,7 @@ This project demonstrates a React + TypeScript + Vite setup with Mapbox GL JS in
 
 Started by cloning the [Vercel Vite React TypeScript starter kit](https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react) as our foundation. 
 
-For the initial implementation, used the Map component from the [Mapbox React-JS tutorial](https://docs.mapbox.com/mapbox-gl-js/example/simple-map/) as a "Hello World" example. However, encountered several TypeScript errors that needed to be resolved:
+For the initial implementation, used the Map component from the [Mapbox React-JS tutorial](https://docs.mapbox.com/help/tutorials/dynamic-markers-react/?step=2) as a "Hello World" example. However, encountered several TypeScript errors that needed to be resolved:
 
 - Fixed ref type annotations for proper TypeScript support
 - Added null checks for React refs
