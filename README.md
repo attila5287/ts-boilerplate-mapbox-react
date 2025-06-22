@@ -14,6 +14,7 @@ For the initial implementation, used the Map component from the [Mapbox React-JS
 - Added null checks for React refs
 - Removed unused imports
 - Properly typed the Mapbox GL JS integration
+- **Fixed CSS styling issues** that prevented the map from displaying correctly
 
 After resolving the local TypeScript issues, encountered additional errors during the Vercel deployment process. These were also successfully fixed, and the project is now live at:
 
@@ -86,3 +87,36 @@ vercel
 - TypeScript support with proper type safety
 - Vite-based development with HMR
 - Ready for Vercel deployment
+
+## CSS Styling
+
+The CSS styling was absolutely critical - **without these specific styles, the Mapbox map would be completely invisible**. The map container needs explicit dimensions to render properly. Additionally, removed all default styles from `index.css` that came with the Vite React starter kit to prevent conflicts:
+
+```css
+#map-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Ensure the map takes up the full viewport */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Make sure the root element also takes full height */
+#root {
+  height: 100%;
+  width: 100%;
+}
+```
+
+**Why this CSS is essential:**
+- Without `width: 100vw` and `height: 100vh`, the map container has zero dimensions and the map won't render
+- The `position: relative` is required for proper Mapbox GL JS positioning
+- Removed all default Vite starter kit styles from `index.css` to ensure clean slate
+- Body/html/root sizing ensures the map can expand to full viewport without scrollbars
