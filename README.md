@@ -1,5 +1,7 @@
 # TypeScript Boilerplate with Mapbox React
 
+https://github.com/attila5287/ts-boilerplate-mapbox-react
+
 This project demonstrates a React + TypeScript + Vite setup with Mapbox GL JS integration.
 
 ## Project Development Journey
@@ -22,8 +24,9 @@ After resolving the local TypeScript issues, encountered additional errors durin
 ### Clone and Setup
 
 ```bash
-# Clone this repository
-git clone https://github.com/your-username/ts-boilerplate-mapbox-react.git
+# Clone this repository link 
+
+git clone https://github.com/attila5287/ts-boilerplate-mapbox-react.git
 
 # Navigate to the project directory
 cd ts-boilerplate-mapbox-react
